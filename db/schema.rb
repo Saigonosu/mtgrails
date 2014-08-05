@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801225917) do
+ActiveRecord::Schema.define(version: 20140805202144) do
+
+  create_table "cards", force: true do |t|
+    t.string   "name"
+    t.text     "types"
+    t.integer  "cmc"
+    t.string   "cost"
+    t.string   "text"
+    t.text     "formats"
+    t.text     "editions"
+    t.integer  "collection_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "collections", force: true do |t|
     t.integer  "user_id"
@@ -20,7 +33,10 @@ ActiveRecord::Schema.define(version: 20140801225917) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "cards_id"
   end
+
+  add_index "collections", ["cards_id"], name: "index_collections_on_cards_id"
 
   create_table "users", force: true do |t|
     t.string   "username"
@@ -38,8 +54,10 @@ ActiveRecord::Schema.define(version: 20140801225917) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "cards_id"
   end
 
+  add_index "users", ["cards_id"], name: "index_users_on_cards_id"
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
