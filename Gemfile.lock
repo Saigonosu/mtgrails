@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/JAndritsch/mtgextractor.git
+  revision: 5957fcc4cb70376d67debc78d5cc29cacb5cf1fa
+  specs:
+    mtgextractor (0.0.1)
+      rest-client
+      rspec
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: 447b7030f856a3e1e9a08f3cc038977587420b9c
   specs:
@@ -172,6 +180,7 @@ GEM
     minitest (5.4.0)
     multi_json (1.10.1)
     multi_test (0.1.1)
+    netrc (0.7.7)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
@@ -219,6 +228,9 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     ref (1.0.5)
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
@@ -304,6 +316,7 @@ DEPENDENCIES
   jquery-cookie-rails
   jquery-rails
   jquery-ui-rails
+  mtgextractor!
   pg
   poltergeist
   pry-rails

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140805202144) do
+ActiveRecord::Schema.define(version: 20140805234310) do
 
   create_table "cards", force: true do |t|
     t.string   "name"
@@ -37,6 +37,47 @@ ActiveRecord::Schema.define(version: 20140805202144) do
   end
 
   add_index "collections", ["cards_id"], name: "index_collections_on_cards_id"
+
+  create_table "mtg_card_types", force: true do |t|
+    t.integer  "mtg_card_id"
+    t.integer  "mtg_type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mtg_cards", force: true do |t|
+    t.string   "name"
+    t.string   "gatherer_url"
+    t.string   "multiverse_id"
+    t.string   "gatherer_image_url"
+    t.string   "mana_cost"
+    t.string   "converted_cost"
+    t.text     "oracle_text"
+    t.text     "flavor_text"
+    t.string   "mark"
+    t.string   "power"
+    t.string   "toughness"
+    t.string   "loyalty"
+    t.string   "rarity"
+    t.string   "transformed_id"
+    t.string   "colors"
+    t.string   "artist"
+    t.integer  "mtg_set_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mtg_sets", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mtg_types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "username"
