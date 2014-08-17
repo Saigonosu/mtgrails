@@ -38,8 +38,8 @@
       .row
         .span9
           = bootstrap_flash
+          -#= render 'search'
           = yield
-          = render 'search'
         .span3
           .well.sidebar-nav
             %h3 Sidebar

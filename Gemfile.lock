@@ -8,9 +8,9 @@ GIT
 
 GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: c457371fe4c06bd284a97d737a4d50bbcd266a2a
+  revision: 957e3074192555e24bbb01d56932ab8c5af95223
   specs:
-    twitter-bootstrap-rails (2.2.8)
+    twitter-bootstrap-rails (3.2.0)
       actionpack (>= 3.1)
       execjs
       rails (>= 3.1)
@@ -288,7 +288,7 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (2.2.2)
       coffee-rails
-    tzinfo (1.2.1)
+    tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
