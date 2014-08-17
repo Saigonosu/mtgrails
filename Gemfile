@@ -18,6 +18,7 @@ gem 'pry-rails'
 
 gem 'simple_form', github: 'plataformatec/simple_form'
 
+gem 'turbolinks'
 # gem 'kaminari'
 
 gem 'devise', '~> 3.2.0', github: 'plataformatec/devise'
