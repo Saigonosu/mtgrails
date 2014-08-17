@@ -27,6 +27,7 @@ gem 'htmlentities', git: 'https://github.com/threedaymonk/htmlentities'
 gem 'therubyracer', :platforms => :ruby
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
 gem 'font-awesome-rails'
+gem 'less-rails'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
